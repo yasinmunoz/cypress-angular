@@ -1,0 +1,30 @@
+Cypress
+
+- Test e2e: Comprobamos que el flujo sea correcto de un lado a otro
+
+- Unit Test: Comprueba solamente una función.
+
+1. Install the schematic:
+
+ng add @cypress/schematic
+
+1a. si falla...
+./node_modules/.bin/cypress cache clear
+./node_modules/.bin/cypress install --force
+
+2. Vamos al package.json. Vemos que existe cypress:open y cypress:run. 
+
+La diferencia es que:
+
+el open se abre una aplicación y desde esa aplicación
+podemos ver todos los test de e2e que tenemos en nuestra app 
+
+el run ejecuta todos los test e2e en la terminal
+
+3. vamos a la carpeta de cypress.
+
+en la carpeta de integration tenemos el spec.ts que es un default test.
+tenemos un caso de prueba "my first test".
+
+cy.visit -> visita un url concreta. la base es localhost:4200.
+cy.contains ->
